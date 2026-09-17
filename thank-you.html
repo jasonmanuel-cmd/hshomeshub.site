@@ -6,14 +6,13 @@
     <title>Thank You - 585 N Wendy Dr</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Vercel Web Analytics -->
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
-    <script async src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -71,7 +70,7 @@
 
         .message {
             font-size: 16px;
-            color: rgba(255,255,255,0.85);
+            color: rgba(255,255,255,0.7);
             line-height: 1.8;
             margin-bottom: 40px;
             animation: slideUp 0.6s ease-out 0.4s both;
@@ -99,7 +98,7 @@
         }
 
         .detail-label {
-            color: rgba(255,255,255,0.75);
+            color: rgba(255,255,255,0.6);
         }
 
         .detail-value {
@@ -215,13 +214,11 @@
     </div>
 
     <script>
-        // Get submission details from URL params or sessionStorage
-        const params = new URLSearchParams(window.location.search);
-        const name = params.get('name') || sessionStorage.getItem('lastSubmissionName') || '';
-        const email = params.get('email') || sessionStorage.getItem('lastSubmissionEmail') || '';
-        const phone = params.get('phone') || sessionStorage.getItem('lastSubmissionPhone') || '';
-        const time = params.get('time') || sessionStorage.getItem('lastSubmissionTime') || new Date().toLocaleString();
-
+        function stored(key) { try { return sessionStorage.getItem(key) || ''; } catch (_) { return ''; } }
+        const name = stored('lastSubmissionName');
+        const email = stored('lastSubmissionEmail');
+        const phone = stored('lastSubmissionPhone');
+        const time = stored('lastSubmissionTime');
         if (name) {
             document.getElementById('detailsBox').style.display = 'block';
             document.getElementById('detailName').textContent = name;

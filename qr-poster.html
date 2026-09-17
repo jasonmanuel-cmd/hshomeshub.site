@@ -9,7 +9,7 @@
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
-    <script async src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
@@ -243,19 +243,6 @@
             colorLight: '#ffffff',
             correctLevel: QRCode.CorrectLevel.H
         });
-
-        // Download as image
-        function downloadPoster() {
-            const canvas = document.querySelector('#qrcode canvas');
-            if (canvas) {
-                html2canvas(document.querySelector('.poster')).then(canvas => {
-                    const link = document.createElement('a');
-                    link.href = canvas.toDataURL('image/png');
-                    link.download = '585-wendy-open-house-poster.png';
-                    link.click();
-                });
-            }
-        }
 
         // For better poster download, we'll use a simpler approach
         function downloadPoster() {

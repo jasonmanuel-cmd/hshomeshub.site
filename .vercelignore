@@ -1,0 +1,7 @@
+audit/
+.claude/
+*.md
+*.txt
+!robots.txt
+test-forms.html
+extra_photos/
