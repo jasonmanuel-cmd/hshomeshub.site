@@ -1,5 +1,5 @@
 // Service Worker for 585 N Wendy Dr
-const CACHE_VERSION = 'v1.0.0';
+const CACHE_VERSION = 'v1.0.1';
 const CACHE_NAME = `hshomeshub-${CACHE_VERSION}`;
 
 // Assets to cache on install
