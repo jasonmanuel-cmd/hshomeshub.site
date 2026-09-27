@@ -1,0 +1,61 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build & Output
+dist/
+build/
+.next/
+out/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+test-forms.html
+.cypress/
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+.claude/
+
+# Build scripts (development only)
+convert-to-webp.js
+extract_scores.ps1
+
+# Audit & Analysis files (documentation, not needed in repo)
+*.audit.json
+final-live-audit.json
+lh-*.json
+lighthouse-*.json
+
+# Optional: Vercel/Deployment files
+.vercel/
+.now/
+
+# Analytics & Reporting (generated)
+*.report.json
+analytics-dump.json
+
+# Duplicate/redundant files
+web_*.jpg
+img_web_*.jpg
+img_*.jpg
